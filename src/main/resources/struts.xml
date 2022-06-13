@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="basicstruts2" extends="struts-default,json-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="findAllStatus" method="findAllStatus" class="com.utez.edu.mx.coursestruts.status.ActionStatus">
+                <result type="json"/>
+        </action>
+        <action name="findAllRoles" method="findAllRoles" class="com.utez.edu.mx.coursestruts.rol.ActionRol">
+            <result type="json"></result>
+        </action>
+        <action name="createRol" method="createRol" class="com.utez.edu.mx.coursestruts.rol.ActionRol">
+            <result type="json"></result>
+        </action>
+        <action name="updateRol" method="updateRol" class="com.utez.edu.mx.coursestruts.rol.ActionRol">
+            <result type="json"></result>
+        </action>
+        <action name="deleteRol" method="deleteRol" class="com.utez.edu.mx.coursestruts.rol.ActionRol">
+            <result type="json"></result>
+        </action>
+        <action name="user" method="user" class="com.utez.edu.mx.coursestruts.user.ActionUser">
+            <result name="success">/views/User/User.jsp</result>
+        </action>
+        <action name="createUser" method="createUser" class="com.utez.edu.mx.coursestruts.user.ActionUser">
+            <result type="json"></result>
+        </action>
+        <action name="updateUser" method="updateUser" class="com.utez.edu.mx.coursestruts.user.ActionUser">
+            <result type="json"></result>
+        </action>
+        <action name="deleteUser" method="deleteUser" class="com.utez.edu.mx.coursestruts.user.ActionUser">
+            <result type="json"></result>
+        </action>
+        <action name="findAllUsers" method="findAllUsers" class="com.utez.edu.mx.coursestruts.user.ActionUser">
+            <result type="json"></result>
+        </action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </package>
+
+</struts>
